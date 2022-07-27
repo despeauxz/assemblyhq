@@ -44,7 +44,7 @@ class ErrorBoundary extends React.Component {
       return (
         <ErrorWrapper>
           <div>
-            <img src="assets/images/warning.png" alt="Warning" />
+            <img src="/assets/images/warning.png" alt="Warning" />
             <h3>Oops, Something went wrong!</h3>
           </div>
         </ErrorWrapper>

@@ -9,6 +9,7 @@ const searchOptions = ['users', 'organizations']
 
 const SearchPage = () => {
   const [loading, setLoading] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState('');
   const [micError, setMicError] = useState('');
   const [search, setSearch] = useState('');
@@ -17,7 +18,6 @@ const SearchPage = () => {
   const { handleData, handleContentChange } = useContext(Context);
   const [isRecording, setisRecording] = useState(false);
   const [stateText, setStateText] = useState("");
-
 
   useEffect(() => {
     const isMicEnabled = async () => {
@@ -42,6 +42,7 @@ const SearchPage = () => {
       setisRecording(false);
       setStateText("");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isRecording])
 
   const startRecordController = () => {
@@ -147,7 +148,6 @@ const SearchPage = () => {
 
   return (
     <Fragment>
-
       <CentralizedContainer className="animate__animated animate__fadeIn">
         <div>
           <div className="title-container">
@@ -193,7 +193,7 @@ const SearchPage = () => {
           </form>
         </div>
       </CentralizedContainer>
-      {micError || stateText && (
+      {(micError || stateText) && (
         <SpeakerWrapper className="animate__animated animate__fadeIn" onClick={exitMicState}>
           <div className="wrapper">
             <h2>{micError ? micError : stateText}</h2>

@@ -38,6 +38,7 @@ const ResultPage = ({ location }) => {
       handleData([]);
       handleContentChange(null);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const navigateBack = () => history.push('/');
